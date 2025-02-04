@@ -1,0 +1,297 @@
+/*  GLOBAL STYLES */
+/*  GLOBAL STYLES */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000; /* Dark theme background */
+  color: white;
+  font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1 {
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+h2,
+button {
+  font-family: "DynaPuff", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+/* HEADER STYLES */
+/* HEADER STYLES */
+
+.colorful-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Applying different colors to each letter in the game title */
+.letter-0 {
+  color: red;
+} /* C */
+.letter-1 {
+  color: blue;
+} /* o */
+.letter-2 {
+  color: green;
+} /* l */
+.letter-3 {
+  color: orange;
+} /* o */
+.letter-4 {
+  color: purple;
+} /* r */
+.letter-5 {
+  color: white;
+} /* Space */
+.letter-6 {
+  color: yellow;
+} /* G */
+.letter-7 {
+  color: pink;
+} /* a */
+.letter-8 {
+  color: cyan;
+} /* m */
+.letter-9 {
+  color: lime;
+} /* e */
+
+.round {
+  font-size: 1.5rem;
+  font-family: "Henny Penny", serif;
+  font-weight: 400;
+}
+
+/* GAME CONTAINER */
+/* GAME CONTAINER */
+
+.game-container {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* COLOR DISPLAY STYLES */
+/* COLOR DISPLAY STYLES */
+
+/* The main color box where guessed and target colors are shown */
+.color-box {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.color-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the guessed and target color comparison */
+.color-comparison {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+/* Each color box in the comparison section */
+.color-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  border: 2px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* COLOR OPTIONS STYLES */
+/* COLOR OPTIONS STYLES */
+
+/* Options container */
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+/* Color option buttons */
+.color-button {
+  width: 130px;
+  height: 130px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: transform 0.2s ease-in-out;
+  background-color: #68b1e3; /* Soft blue */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlight selected color */
+.color-button:focus {
+  outline: 3px solid white;
+}
+
+/* STATUS AND SCORE STYLES */
+
+/* Game status message */
+.status {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+  color: white;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Score display */
+.score {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* BUTTON STYLES */
+/* BUTTON STYLES */
+
+/* General button styles */
+button {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  background-color: #ff6f61; /* Vibrant coral color */
+  color: #fff; /* White text for contrast */
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #f45c5a; /* Slightly darker shade on hover */
+}
+
+/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .color-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .color-button {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .game-container {
+    padding: 10px;
+  }
+
+  .color-box {
+    width: 120px;
+    height: 120px;
+  }
+
+  .color-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .status {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 376px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+/* ANIMATIONS */
+/* ANIMATIONS */
+
+/* Status message animations */
+.status.correct-status {
+  animation: celebrate 2s ease-in-out;
+}
+
+.wrong-status.fade-out {
+  animation: fadeOut 2s ease-in-out;
+}
+
+/* Animation for correct answer */
+@keyframes celebrate {
+  0% {
+    transform: scale(1);
+    color: green;
+  }
+  50% {
+    transform: scale(1.2);
+    color: yellow;
+  }
+  100% {
+    transform: scale(1);
+    color: green;
+  }
+}
+
+/* Animation for wrong answer */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
