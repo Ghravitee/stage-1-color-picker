@@ -94,7 +94,7 @@ export default function App() {
   return (
     <div className="game-container">
       {/* Title with multi-colored letters */}
-      <h1 data-testid="gameInstructions" className="colorful-title">
+      <h1 className="colorful-title">
         {["C", "o", "l", "o", "r", " ", "G", "a", "m", "e"].map(
           (char, index) => (
             <span key={index} className={`letter letter-${index}`}>
@@ -105,7 +105,7 @@ export default function App() {
       </h1>
 
       {/* Game instructions */}
-      <h2>
+      <h2 data-testid="gameInstructions">
         Guess the correct color from the options. After selecting, the correct
         color is revealed. Earn points for correct guesses. The game ends after
         10 rounds. Restart to play again!
@@ -121,7 +121,7 @@ export default function App() {
             <div
               className="color-box"
               style={{ backgroundColor: selectedColor }}
-              data-testid="guessedColor"
+              data-testid="colorBox"
             ></div>
             <p>Your Guess</p>
           </div>
@@ -129,7 +129,7 @@ export default function App() {
             <div
               className="color-box"
               style={{ backgroundColor: targetColor }}
-              data-testid="targetColor"
+              data-testid="colorBox"
             ></div>
             <p>Target Color</p>
           </div>
