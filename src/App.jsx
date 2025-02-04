@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// Define available colors for the game
 const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
 
 export default function App() {
